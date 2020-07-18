@@ -1,0 +1,60 @@
+////////////////////////////////////////////////
+// Modal
+.light-box {
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+  }
+
+  &__modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &--hidden {
+      display: none !important;
+    }
+  }
+
+  &__content {
+    background-color: white;
+    // padding: 1rem;
+    border-radius: 0.8rem;
+    width: 80vw;
+    height: 60vh;
+    position: absolute;
+    overflow: hidden;
+  }
+  &__img {
+    width: 100%;
+    object-fit: fill;
+    height: 100%;
+  }
+
+  &__btn {
+    font-size: 5rem;
+    color: $color-grey-light-1;
+    position: absolute !important;
+    top: 12px;
+    right: 40px;
+    border: none;
+    border-radius: 10rem;
+    background-color: transparent;
+    &:hover,
+    &:active,
+    &:focus {
+      cursor: pointer !important;
+      outline: none;
+    }
+  }
+}
